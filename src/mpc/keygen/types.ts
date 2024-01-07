@@ -92,3 +92,34 @@ export type RoundOutputss = [
       KeygenInputForRound4,
       KeygenInputForRound5
 ];
+
+export type GenericKeygenRoundInput = Partial<
+      | KeygenInputForRound1
+      | KeygenInputForRound2
+      | KeygenInputForRound3
+      | KeygenInputForRound4
+      | KeygenInputForRound5
+>;
+export type GenericKeygenRoundOutput = Partial<
+      KeygenRound1Output | KeygenRound2Output | KeygenRound3Output | KeygenRound4Output | KeygenRound5Output
+>;
+export type GenericKeygenRoundBroadcast = Partial<
+      KeygenBroadcastForRound2 | KeygenBroadcastForRound3 | KeygenBroadcastForRound4
+>;
+export type GenericKeygenRoundDirectMessage = Partial<KeygenDirectMessageForRound4>;
+
+export type KeygenRoundInputs = {
+      "1": KeygenInputForRound1;
+      "2": KeygenInputForRound2;
+      "3": KeygenInputForRound3;
+      "4": KeygenInputForRound4;
+      "5": KeygenInputForRound5;
+};
+
+export type KeygenRoundOutputs = {
+      1: KeygenInputForRound1;
+      2: KeygenInputForRound2;
+      3: KeygenInputForRound3;
+      4: KeygenInputForRound4;
+      5: KeygenInputForRound5;
+};
